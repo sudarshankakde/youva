@@ -118,7 +118,7 @@ body{
 /* theme */
 #themeicon{
     position: absolute;
-    top: 4vh;
+    top: 3vh;
     right: 13vh;
     z-index: 5;
     height: max-content;
@@ -131,7 +131,6 @@ body{
 #themeicon>i{
     font-size: 5vh;
     color: var(--youth);    
-    left:2vh;
 }
 #theme{
     border: thin solid var(--youth);
@@ -168,13 +167,18 @@ body{
     right: 5vh;
     top: 4vh;
     z-index: 3;
-    background-color: var(--elegance);
+    background-color: transparent;
 }
+
 /* manubar list  */
 #manu>i{
     color: var(--peace);
     font-size: 5vh;
-    font-weight: lighter;
+}
+#manu>i:hover{
+    transition: 500ms;
+    color: var(--youth);
+    cursor: pointer;
 }
 /* manubar */
 #manubar{
@@ -187,6 +191,7 @@ body{
     display: none;
     position: fixed;
 }
+
 /* close manu btn */
 #closemanu{
     color: var(--peace);
@@ -194,6 +199,11 @@ body{
     text-align: right;
     margin: 5vh;
     margin-top: 1vh;
+}
+#closemanu:hover{
+    color: var(--youth);
+    transition: 500ms;
+
 }
 #manulist>ol>li>a{
     color: var(--peace);

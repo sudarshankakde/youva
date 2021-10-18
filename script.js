@@ -1,3 +1,4 @@
+// loader
 var loader = document.getElementById('loader');
 
 window.addEventListener('load', loaded);
@@ -9,6 +10,9 @@ function loaded() {
 var theme = document.getElementById('theme');
 var themeicon = document.getElementById('themeicon');
 var iconvisible = 0;
+var localtheme =  localStorage.getItem("theme");
+// checking for local storage files
+window.localStorage
 function showthemebar() {
   if (iconvisible == 0) {
     theme.style.display = "block";
@@ -19,12 +23,33 @@ function showthemebar() {
     iconvisible = 0;
   }
 }
+// setting up local storage theme saved last time
+if(localtheme=='youth'){
+  document.documentElement.style.setProperty('--youth', '#9a9ad6');
+  document.documentElement.style.setProperty('--loyality', '#1de1ff');
+localStorage.setItem("theme", "youth");
+}
+else if(localtheme=='loyality'){
+  document.documentElement.style.setProperty('--youth', '#1de1ff');
+  localStorage.setItem("theme", "loyality");
+}
+else{
+  document.documentElement.style.setProperty('--youth', '#9a9ad6');
+  document.documentElement.style.setProperty('--loyality', '#1de1ff');
+  localStorage.setItem("theme", "youth");
+}
+
+// chage theme function called from document (html)
 function changetoyouth() {
   document.documentElement.style.setProperty('--youth', '#9a9ad6');
   document.documentElement.style.setProperty('--loyality', '#1de1ff');
+  localStorage.setItem("theme", "youth");
+
 }
 function changetoloyality() {
   document.documentElement.style.setProperty('--youth', '#1de1ff');
+  localStorage.setItem("theme", "loyality");
+
 }
 
 // show manu bar
