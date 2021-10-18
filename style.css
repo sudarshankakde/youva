@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overlock:wght@700&display=swap');
+
+*{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    cursor: default;
+    position: relative;
+}
+:root{
+    --peace: white;
+    /* motivated by peace */
+    --elegance: #0e0e0e;
+    --loyality:#1de1ff;
+    /* intimacy , loyality ,confidance */
+    --power:red;
+    /* motivated by power */
+    --intimacy:blue;
+    /* motivated by intimacy , loyality ,confidance */
+    --youth:#9a9ad6;
+    /* youth */
+}
+/* page loader */
+#loader{
+    background-color: var(--elegance);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader>.dot{
+    padding: 1.5vh;
+    margin: 0 1vh;
+    border: thin solid var(--youth);
+    border-radius: 10vh;
+    background: var(--youth);
+}
+#loader>.dot:nth-child(1){
+    background: var(--loyality);
+    border: transparent;
+    animation-name: dotmove;
+    animation-delay: 100ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+#loader>.dot:nth-child(2){
+    background:red;
+    border: transparent;
+    animation-name: dotmove;
+    animation-delay: 300ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+#loader>.dot:nth-child(3){
+    background: orange;
+    border: white;
+    animation-name: dotmove;
+    animation-delay: 500ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+#loader>.dot:nth-child(4){
+    border: transparent;
+    background: green;
+    animation-name: dotmove;
+    animation-delay: 700ms;
+    animation-duration: 3s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+}
+#loader::after{
+    content: 'Loding...';
+    position: absolute;
+    font-size: 4vh;
+    font-weight: 600;
+    bottom:  38%;
+    color: var(--peace);
+}
+@keyframes dotmove {
+    0%{
+        transform: translateY(-5vh);
+    }
+    50%{
+        transform: translateY(0vh);
+    }
+    100%{
+        transform: translateY(-5vh);
+    }
+}
+#logo>img{
+    position: absolute;
+    height: 250px;
+    z-index: 15;
+    top: -13vh;
+    left: -3vh;
+}
+/* scollbar */
+::-webkit-scrollbar{
+    background-color: var(--peace);
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--youth);
+}
+::-webkit-scrollbar-track{
+    color: var(--peace);
+}
+/* theme */
+#themeicon{
+    position: absolute;
+    top: 4vh;
+    right: 13vh;
+    z-index: 5;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    width: 5vh;
+    height: 8vh;
+}
+#themeicon>i{
+    font-size: 5vh;
+    color: var(--youth);    
+    left:2vh;
+}
+#theme{
+    border: thin solid var(--youth);
+    border-radius: 1vh;
+    background: var(--elegance);
+    position: absolute;
+    z-index: 4;
+    color: var(--peace);
+    display: flex;
+    flex-direction: row;
+    transform: rotate(90deg);
+    right: 20vh;
+    top: 5vh;
+    display: none;
+}
+
+#loyality{
+    padding: 2vh;
+    border-radius: 3vh;
+    background: #1de1ff;
+    border:thin solid var(--peace);
+    margin: 2vh;
+}
+#youth{
+    padding: 2vh;
+    border-radius: 3vh;
+    background: #9a9ad6;
+    border:thin solid var(--peace);
+    margin: 2vh;
+}
+/* manu */
+#manu{
+    position: absolute;
+    right: 5vh;
+    top: 4vh;
+    z-index: 3;
+    background-color: var(--elegance);
+}
+/* manubar list  */
+#manu>i{
+    color: var(--peace);
+    font-size: 5vh;
+    font-weight: lighter;
+}
+/* manubar */
+#manubar{
+    height: 100vh;
+    background-color: var(--elegance);
+    position: absolute;
+    right: 0vh;
+    width: 35%;
+    z-index: 6;
+    display: none;
+    position: fixed;
+}
+/* close manu btn */
+#closemanu{
+    color: var(--peace);
+    font-size: 7vh;
+    text-align: right;
+    margin: 5vh;
+    margin-top: 1vh;
+}
+#manulist>ol>li>a{
+    color: var(--peace);
+    font-size: 5vh;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+    opacity: 0.5;
+}
+#manulist>ol>li>a:hover{
+    opacity: 1;
+}
+#manulist>ol>li>a:active{
+    opacity: 1;
+}
+#manulist>ol>li{
+    margin: 3vh 0;
+}
+#manulist{
+    margin-top: 15vh;
+    height: 45vh;
+    padding-left: 10vh;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    border-top: thin solid rgba(255, 255, 255, 0.05);
+    border-bottom: thin solid rgba(255, 255, 255, 0.05);
+}
+
+#socailLinks{
+    padding: 5vh;
+}
+#socailLinks>a{
+    color: var(--peace);
+    text-decoration: none;
+    font-size: 5vh;
+    margin: 0 5vh;
+    opacity: 0.5;
+}
+#socailLinks>a:hover{
+    opacity: 1;
+    color: var(--youth);
+}
+/* page home */
+#home{
+    background-color: var(--elegance);
+    background-image: url(earth.jpg), url(curv.svg) , url(stars.webp);
+    background-size:  1280px 463px , 1164px 380px , cover;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: bottom right, bottom right,top right;
+    background-blend-mode: lighten , normal , normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+    height: 100vh;
+    position: relative;
+    border-bottom: thin solid var(--youth);
+}
+#home::before{
+    content: "INTRODUCE";
+    color: var(--peace);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 700;
+    left:0%;
+    top: 50%;
+    transform: rotate(270deg);
+    font-family:inherit;
+}
+
+#home>.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--peace);
+    text-transform: capitalize;
+}
+#home>.container>.row>.card-text>p::first-letter{
+    opacity: 0.7;
+    color: var(--loyality);
+    word-spacing: 0.5vh;
+    font-size: 4vh;
+    font-weight:500;
+}
+#home>.container>.row>.card-text>h1>b{
+    font-weight: inherit;
+    opacity: 0.9;
+}
+#home>.container>.row>.card-text>h1{
+    font-size: 8vh;
+    word-spacing: 0.5vh;
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+    color: var(--youth);
+    text-shadow: 1px 1px 2px var(--elegance);
+}
+#home>.container>.row>.card-text>small{
+    color: var(--peace);
+    font-weight: bold;
+    font-size: 3vh;
+}
+#home>.container>.row{
+    position: relative;
+}
+#home>.container>.row>.card-text::after{
+    content: ' ';
+    font-size: 2vh;
+    position: absolute;
+    left: 3vh;
+    bottom: 0;
+    padding-left: 35vh ;
+    border-bottom: 4px solid var(--youth);
+}
+#home>.container>.row>.card-img>small{
+    color: var(--peace);
+    background: transparent;
+    opacity: 1;
+    padding: 1vh 2vh;
+}
+/* what we are */
+#WhatWeAre{
+    background-color: var(--elegance);
+    color: var(--peace);
+    height: 100vh;
+    position: relative;
+}
+#WhatWeAre::after{
+    content: "WHAT WE ARE";
+    color: var(--peace);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 700;
+    right:0%;
+    top: 35%;
+    transform: rotate(90deg);
+    word-spacing: 3px;
+}
+#WhatWeAre>.container>.row>.card-text>h1{
+    text-transform: capitalize;
+    font-size: 4vh;
+    
+}
+#WhatWeAre>.container>.row>.card-text>h1>b{
+    color: var(--youth);
+}
+#WhatWeAre>.container>.row>.card-text>p>b{
+    color: var(--youth);
+    text-transform: capitalize;
+}
+#WhatWeAre>.container>.row>.card-text::after{
+    content: ' ';
+    font-size: 2vh;
+    position: absolute;
+    right: 3vh;
+    bottom: 10vh;
+    padding-left: 40vh ;
+    border-bottom: 4px solid var(--youth);
+}
+#WhatWeAre>.container>.row>.card-img2>b{
+    text-transform: uppercase;
+    color: var(--loyality);
+    font-size: 4vh;
+    font-weight: 600;
+}
+/* our team */
+#services{
+    background: var(--elegance);
+    height: 100vh;
+    color: var(--peace);
+    position: relative;
+}
+#services::before{
+    content: "SERVICES";
+    color: var(--peace);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 700;
+    left:0%;
+    top: 50%;
+    transform: rotate(270deg);
+}
+#services>.container>.row>.card-text>h1{
+    color: var(--peace);
+    /* font-weight: bolder; */
+    font-family: 'Bebas Neue', cursive;
+    overflow-y: hidden;
+    font-size: 10vh;
+}
+#services>.container>.row>.card-text>h1>b{
+    color: var(--youth);
+    font-weight: inherit;
+}
+#services>.container>.row>.card-text>ol>li>a{
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.4;
+    font-size: 3vh;
+}
+#services>.container>.row>.card-text>ol>li{
+    margin: 8vh 0;
+    cursor: pointer;
+}
+#services>.container>.row>.card-text>ol>li>a:hover{
+    transition: 1s;
+    opacity: 1;
+}
+
+#services>.container>.row>.card-text::after{
+    content: ' ';
+    font-size: 2vh;
+    position: absolute;
+    left: 2vh;
+    bottom: 0vh;
+    padding-left: 35vh ;
+    border-bottom: 4px solid var(--youth);
+}
+#products{
+    height: 100vh;
+    background: var(--elegance);
+    color: var(--peace);
+    position: relative;
+}
+#products::before{
+    content: "our products";
+    color: var(--peace);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 700;
+    right:0%;
+    top: 40%;
+    transform: rotate(90deg);
+    font-family:inherit;
+}
+.products{
+    border: thin solid var(--youth);
+    box-shadow: 1px 1px 8px 3px var(--youth);
+    border-radius: 2px;
+
+}
+.products:hover{
+    transform: scale(1.02);
+    box-shadow: 1px 1px 8px 3px var(--youth);
+}
+
+.products>h1{
+    color: var(--loyality);
+    text-transform: capitalize;
+}
+.products>p{
+    color: var(--peace);
+    text-transform: capitalize;
+}
+.products>p:last-child{
+    width:80%;
+}
+.products>span{
+    margin-top: 2vh;
+    text-transform: capitalize;
+}
+.products>a>span{
+    margin-top: 2vh;
+    text-transform: capitalize;
+    color: var(--peace);
+    
+}
+.products>span:hover,.products>a:hover,.products>a>span:hover{
+    cursor: pointer;
+    color: var(--youth);
+    text-decoration: none;
+
+}
+
+#contactus{
+    background: var(--elegance);
+    color: var(--peace);
+    border-top: thin solid var(--youth);
+    height: 100vh;
+    position: relative;
+}
+#contactus::after{
+    content: "Get in touch";
+    color: var(--peace);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 700;
+    left:0%;
+    top: 50%;
+    transform: rotate(270deg);
+    font-family:inherit;
+}
+.socailLinks{
+    padding:0 5vh;
+}
+.socailLinks>a{
+    color: var(--peace);
+    text-decoration: none;
+    font-size: 5vh;
+    margin: 0 5vh;
+    opacity: 0.5;
+}
+.socailLinks>a:hover{
+    opacity: 1;
+    color: var(--youth);
+}
+@media (max-width:576px ) {
+    #manubar{
+        height: 100vh;
+        background-color: var(--elegance);
+        position: absolute;
+        right: 0vh;
+        width: 100%;
+        z-index: 6;
+        display: none;
+        position: fixed;
+    }
+    #home::before,#services::before,#WhatWeAre::after,#products::before,#contactus::after{
+        display: none;
+    }
+    #services,#WhatWeAre,#products,#contactus{
+        height: max-content;
+    }
+        #home{
+            height: max-content;
+        }
+        #home>.container>.row>.card-text>h1{
+            font-size: 6vh;
+            word-spacing: 0.5vh;
+        }
+        #home>.container>.row>.card-text>p{
+            font-size: 3vh;
+        }
+        #WhatWeAre{
+            height: max-content;
+        }
+        .card-img{
+            display: none;
+        }
+        #WhatWeAre>.container>.row>.card-text::after{
+            content: ' ';
+            font-size: 2vh;
+            position: absolute;
+            right: 3vh;
+            bottom: 0;
+            padding-left: 30vh ;
+        }
+
+
+    }
+
+
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 25px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--elegance); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */ 
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color:var(--elegance);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid var(--youth);
+    width: 75%;
+    color: var(--peace);
+    text-align: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: var(--youth);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+    height: 5vh;
+    overflow-y: hidden;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--loyality);
+    text-decoration: none;
+    cursor: pointer;
+  }
+

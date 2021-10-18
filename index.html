@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youva Devloper's</title>
+    <!-- tab icon  -->
+    <link rel="icon" href="tab-icon.png" type="image/gif" sizes="">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script id="imdb-rating-api" src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- FA FA ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/css/imdbRating.css">
+    <!-- bootstrap-icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+        integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- #loading screen -->
+    <div id="loader">
+        <b class="dot"></b>
+        <b class="dot"></b>
+        <b class="dot"></b>
+        <b class="dot"></b>
+    </div>
+    <nav>
+    <div id="logo">
+        <img src="youva-logos_white.png" alt="" >
+     
+</video>
+    </div>
+    <!-- theme paint brush shown -->
+    <div id="themeicon" title="theme" onclick="showthemebar()">
+        <i class="fa fa-paint-brush"></i>
+    </div>
+    <!-- theme by default hiden -->
+    <div id="theme" title="THEME">
+        <div id="loyality" onclick="changetoloyality()" title="LIGHT BLUE"></div>
+        <div id="youth" onclick="changetoyouth()" title="DARK LAVENDER"></div>
+    </div>
+    <!-- manu three bars shown -->
+    <div id="manu">
+        <i class="fa fa-bars" onclick="showmanubar()"></i>
+    </div>
+    <!-- manubar by defualt hiden -->
+    <div id="manubar">
+        <div id="closemanu">&times;</div>
+        <div id="manulist">
+            <ol>
+                <li onclick="closemanubar()"><a href="#home">home</a></li>
+                <li onclick="closemanubar()"><a href="#WhatWeAre">what we are</a></li>
+                <li onclick="closemanubar()"><a href="#services">services</a></li>
+                <li onclick="closemanubar()"><a href="#products">our products</a></li>
+                <li onclick="closemanubar()"><a href="#contactus">Countact us</a></li>
+            </ol>
+        </div>
+        <div id="socailLinks">
+            <!-- twitter -->
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-twitter"></i></a>
+            <!-- facebook -->
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-facebook-f"></i></a>
+            <!-- linkedin -->
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-linkedin-square"></i></a>
+
+        </div>
+    </div>
+</nav>
+    <!-- home page -->
+    <div id="home">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-lg-8 col-sm-8 col-12 card-text py-5" data-aos="fade-down-right"
+                    data-aos-duration="1000">
+                    <p class="pb-4">Welcome to <br>
+                        Youva Devloper's.</p>
+                    <h1 class="py-2">Building <b>awesome</b> Websites <br> for <b>awesome</b> people.</h1>
+                    <small class="text-capitalize ">Web design at its finest.</small>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-12 py-5 text-center card-img" data-aos="fade-left"
+                    data-aos-duration="3000">
+                    <img src="website.svg" alt="" class="img-fluid">
+                    <br>
+                    <small>build best Websites For your all devices.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- what we are -->
+    <div id="WhatWeAre">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 col-sm-4 col-12 py-lg-5 py-sm-4 pb-0 text-center card-img2">
+                    <img src="code.svg" alt="" class="img-fluid">
+                    <b data-aos="fade-down" data-aos-duration="1500">
+                        CREATIVE & DEDICATED IS THINGS THAT WE BUILT FOR YOU.
+                    </b>
+                </div>
+                <div class="col-lg-7 col-sm-8 col-12 card-text py-lg-5 py-sm-5 py-0" data-aos="fade-left"
+                    data-aos-duration="1500">
+                    <h1 class="py-4">what is <b>Youva</b>?</h1>
+                    <p>
+                    <p>Everyone wants to know what is Youva?, what Youva means? <br>
+                        So, YOU in Youva stand for You means Our Clients.
+                        VA in Youva stands for very awesome. <br>
+                        After Asuming this in whole sentence it becomes <b
+                            title="Your Very Awesome That You Choose Us">YOUR VERY AWESOME.</b></p>
+                    <p>Other Meaning of Youva is youthful adjective. Someone who is <b>youthful behaves</b> as if they
+                        are young or younger than they really are.</p>
+                    <p>
+                        <b>Our Main Motive is to be Active and be Young Minded for your project's.</b>
+                    </p>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-12 mt-5 card-text" >
+                    <h1>WE LIKE <b>TO MAKE</b> THINGS <b>EASY</b> AND <b>MEANINGFULL.</b></h1>
+                    <ol>
+                        <li id="myBtn" data-aos="fade-right" data-aos-duration="400"><a href="#services">01. WEBSITE DEVELOPMENT</a></li>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h1 class="text-uppercase">Website Development</h1>
+                                <p class="text-capitalize">In today's digital world, a website is extremely important
+                                    for any business The website what the business or company is about. If you have a
+                                    business and don’t have a website, you are probably losing out on opportunities for
+                                    your business. So keeping the unique design is a very important factor, which what
+                                    we do.</p>
+                            </div>
+                        </div>
+                        <li id="Ui/Ux" data-aos="fade-right" data-aos-duration="700"><a href="#services">02. UI/UX DESIGNING</a></li>
+                        <div id="myModal1" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h1 class="text-uppercase">UI/UX Designing</h1>
+                                <p class="text-capitalize">UI/UX is the design of the user interface for the machine and
+                                    software such as computer, mobile, and tabs, etc. We design the user interface for
+                                    all devices with a focus on maximizing usability and user experiences. Our goal of
+                                    user interface designing is to make the user interaction as simple and efficient as
+                                    possible and to make it more meaningful and user-friendly, in terms of accomplishing
+                                    the user goals.</p>
+                            </div>
+                        </div>
+                        <li id="digitalM" data-aos="fade-right"data-aos-duration="900"><a href="#services">03. DIGITAL MARKETING</a></li>
+                        <div id="myModal2" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h1 class="text-uppercase">Digital Marketing</h1>
+                                <p class="text-capitalize">Digital marketing is the component of marketing that utilizes
+                                    the internet and online-based digital technologies such as desktop computers, mobile
+                                    phones, and other digital media and platforms to promote products and services. As
+                                    digital platforms became increasingly incorporated into marketing plans and everyday
+                                    life,[3] and as people increasingly use digital devices instead of visiting physical
+                                    shops, we provide digital services like search engine optimization (SEO), search
+                                    engine marketing (SEM), content marketing, influencer marketing, content automation,
+                                    campaign marketing, data-driven marketing, e-commerce marketing, social media
+                                    marketing, social media optimization, e-mail direct marketing,</p>
+                            </div>
+                        </div>
+                    </ol>
+                </div>
+
+                <div class="col-lg-6 col-sm-6 col-12 pt-5">
+                    <img src="service.svg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our products -->
+    <div id="products">
+        <div class="container"  data-aos="zoom-out-left">
+            <div class="row py-5 d-inline-flex flex-lg-nowrap flex-sm-nowrap flex-wrap" >
+                <div class="col-lg-4 col-sm-4 col-10  products py-5 ml-4" >
+                    <h1>STUDY ASSIST.</h1>
+                    <p>platform for all students from 5th grade to 12th <br>
+                        we provide notes, books, study blogs, etc. for Diploma students as well</p>
+                    <span title="coming soon">know more --></span>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-10  products py-5 ml-4">
+                    <h1>WORK4U.</h1>
+                    <p>platform for ground level workers. <br>
+                        those who have no degrees but have well knowlage and experience in there work. <br>
+                        this platform provides them an Job Aporcunity.
+                    </p>
+                    <span title="coming soon">know more --></span>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-10  products py-5 ml-4">
+                    <h1>MORE.</h1>
+                    <p>some more projects are under Development you will see them soon.</p>
+                    <a href="#contactus"><span title="coming soon">get in touch --></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contactus -->
+    <div id="contactus">
+        <div class="container pt-5" data-aos="zoom-out-down">
+            <!-- socail-links row  -->
+            <div class="row">
+                <div class="col-12 text-center mb-4 socailLinks">
+                    <!-- instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-instagram"></i></a>
+                    <!-- twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-twitter"></i></a>
+                    <!-- facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="row py-3">
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
+                    <img src="contact.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-sm-6 col-12" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">
+                    <form action="mailto:sudarshankakde1111@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="Name">Your Name</label>
+                            <input type="text" class="form-control" id="Name" placeholder="jhone smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-info" type="submit" value="send">send mail</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <!-- creator -->
+                <div class="col-12 text-center pt-4 pb-1 text-capitalize">
+                    made with <i class="fa fa-heart" style="font-size: inherit; color: red; " title="LOVE ♥"></i>
+                    by <b>TEAM YOUVA.</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
