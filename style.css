@@ -480,7 +480,7 @@ body{
     background: var(--elegance);
     color: var(--peace);
     border-top: thin solid var(--youth);
-    height: 100vh;
+    height: max-content;
     position: relative;
 }
 #contactus::after{
