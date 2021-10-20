@@ -17,6 +17,7 @@ function showthemebar() {
   if (iconvisible == 0) {
     theme.style.display = "block";
     iconvisible = 1;
+    
   }
   else if(iconvisible==1){
     theme.style.display = "none";
@@ -123,3 +124,7 @@ window.onclick = function (event) {
   }
 
 }
+
+
+
+

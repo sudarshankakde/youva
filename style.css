@@ -14,7 +14,7 @@ body{
 :root{
     --peace: white;
     /* motivated by peace */
-    --elegance: #0e0e0e;
+    --elegance: rgb(39 39 39);
     --loyality:#1de1ff;
     /* intimacy , loyality ,confidance */
     --power:red;
@@ -106,20 +106,20 @@ body{
 }
 /* scollbar */
 ::-webkit-scrollbar{
-    background-color: var(--peace);
+    background-color: var(--elegance);
     width: 8px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--youth);
 }
 ::-webkit-scrollbar-track{
-    color: var(--peace);
+    color: transparent;
 }
 /* theme */
 #themeicon{
     position: absolute;
-    top: 3vh;
-    right: 13vh;
+    top: 4vh;
+    right: 14vh;
     z-index: 5;
     height: max-content;
     width: max-content;
@@ -130,7 +130,19 @@ body{
 }
 #themeicon>i{
     font-size: 5vh;
-    color: var(--youth);    
+    color: var(--youth);   
+    animation: colorchanger; 
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+@keyframes colorchanger {
+    0%{
+        color: var(--loyality);
+    }
+    100%{
+        color: var(--youth);
+    }
 }
 #theme{
     border: thin solid var(--youth);
@@ -168,6 +180,7 @@ body{
     top: 4vh;
     z-index: 3;
     background-color: transparent;
+
 }
 
 /* manubar list  */
@@ -207,32 +220,35 @@ body{
 }
 #manulist>ol>li>a{
     color: var(--peace);
-    font-size: 5vh;
+    font-size: 4vh;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
     text-decoration: none;
     opacity: 0.5;
 }
 #manulist>ol>li>a:hover{
     opacity: 1;
+    color: var(--youth);
 }
 #manulist>ol>li>a:active{
     opacity: 1;
 }
 #manulist>ol>li{
     margin: 3vh 0;
+    padding: 1vh 0;
 }
 #manulist{
     margin-top: 15vh;
-    height: 45vh;
-    padding-left: 10vh;
+    height: 45%;
+    padding-left: 7vh;
+    padding-right: 3vh;
     overflow-x: hidden;
     overflow-wrap: break-word;
     overflow-y: auto;
     margin-left: 3vh;
     margin-right: 3vh;
-    border-top: thin solid rgba(255, 255, 255, 0.05);
-    border-bottom: thin solid rgba(255, 255, 255, 0.05);
+    border-top: thin solid var(--youth);
+    border-bottom: thin solid var(--youth);
 }
 
 #socailLinks{
@@ -519,8 +535,51 @@ body{
         display: none;
         position: fixed;
     }
-    #home::before,#services::before,#WhatWeAre::after,#products::before,#contactus::after{
+    #home::before,#contactus::after{
         display: none;
+    }
+    #WhatWeAre::after{
+        content: '<what we are/>';
+        font-size: 5vh;
+        text-align: center;
+        display: block;
+        left:0vh;
+        top: 0vh;
+        transform: rotate(0deg);
+        color: var(--youth);
+    }
+    #services::before{
+        margin-top: 0vh;
+        transform: translateX(50%);
+        position: unset;
+        display: block;
+        font-size: 5vh;
+        text-align: center;
+        left:0vh;
+        top: 0vh;
+        transform: rotate(0deg);
+        color: var(--youth);
+    }
+    #products::before{
+        margin-top: 0vh;
+        position: unset;
+        display: block;
+        font-size: 7vh;
+        text-align: center;
+        left:0vh;
+        top: 0vh;
+        transform: rotate(0deg);
+        color: var(--youth);
+    }
+    #contactus::before{
+        content: "Get in touch";
+    color: var(--youth);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-family:inherit;
+    display: block;
+        font-size: 7vh;
     }
     #services,#WhatWeAre,#products,#contactus{
         height: max-content;
